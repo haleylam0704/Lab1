@@ -2,7 +2,9 @@
 title: "Lab 01 - Hello R"
 author: "Haley Lam"
 date: "1/15/2025"
-output: html_document
+output: 
+  html_document: 
+    theme: cosmo
 ---
 
 ## Load packages and data
