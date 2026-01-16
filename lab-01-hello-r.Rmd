@@ -22,10 +22,7 @@ data("datasaurus_dozen")
 
 There are 2 columns and 13 rows
 
-
 ### Exercise 2
-
-The answers for this exercise are already provided to help guide you. Clean up the narrative to reflect what you want to submit. Let’s break it into steps:
 
 First, let's plot the data in the dino dataset:
 
@@ -43,7 +40,7 @@ Next, let's calculate the correlation between `x` and `y` in this dataset:
 dino_data %>%
   summarize(r = cor(x, y))
 ```
-Once you’ve cleaned up the text, add your own explanation or observations here!
+The points have no correlation. It's a dinosaur!
 
 
 ### Exercise 3
@@ -54,16 +51,20 @@ Note that the R chunks are labeled with `plot-star` and `cor-star` to provide sp
 To finish, clean up the narrative by removing these instructions.
 
 ```{r plot-star}
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
 
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+         geom_point()
 ```
 
-I'm some filler text, you should replace me with more meaningful text...
+A star with very scattered points! Now let's compute the meaningless correlation.
 
 ```{r cor-star}
-
+star_data %>% 
+  summarize(r = cor(x,y))
 ```
-Add your explanation here—what did you notice?
-
+There was also little to no correlation.
 
 ### Exercise 4
 
