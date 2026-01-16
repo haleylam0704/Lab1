@@ -20,7 +20,8 @@ data("datasaurus_dozen")
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+There are 2 columns and 13 rows
+
 
 ### Exercise 2
 
