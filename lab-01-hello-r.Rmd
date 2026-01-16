@@ -64,19 +64,27 @@ A star with very scattered points! Now let's compute the meaningless correlation
 star_data %>% 
   summarize(r = cor(x,y))
 ```
-There was also little to no correlation.
+There was also little to no correlation between x and y, just like the dino.
 
 ### Exercise 4
 
 Add your code and narrative to complete this exercise. Use the conventions from the previous exercises to name your chunks and organize your work.
 
 ```{r}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
+
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 
 ```
 
 ```{r}
+circle_data %>% 
+  summarize(r = cor(x,y))
 
 ```
+There's also no correlation! (why are they all -0.06?)
 
 ### Exercise 5
 
